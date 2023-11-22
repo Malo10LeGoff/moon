@@ -119,7 +119,8 @@ ul, ol
 
 .timeline li .timeline-badge
 {
-    color: #d82c2e;
+    color: white;
+    font-weight: bold;
     width: 50px;
     line-height: 50px;
     font-size: 20px;
@@ -128,7 +129,7 @@ ul, ol
     top: 16px;
     left : 50%;
     margin-left: -25px;
-    background-color: #ddd;
+    background-color: #212764;
     border-radius: 50%;
 }
 .timeline-panel-container
