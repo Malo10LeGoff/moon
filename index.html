@@ -10,28 +10,37 @@
             justify-content: center;
             align-items: center;
             margin: 0;
-            background-color: #212764; /* Set a background color */
+            background-color: #211D47; /* Set a background color */
         }
         
+        /* Style for the logo container */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         /* Style for the logo */
-        .logo {
-            width: 100px; /* Adjust width and height as needed */
-            height: 100px;
+        .logo img {
+            max-width: 100%;
+            height: auto;
             border-radius: 50%;
-            animation: pulse 2s ease-in-out infinite; /* Apply pulsating animation */
+            animation: pulse 3s ease-in-out infinite; /* Apply pulsating animation */
         }
 
         /* Animation keyframes */
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.1); } /* Scale up to 120% */
+            50% { transform: scale(1.1); } /* Scale up to 110% */
             100% { transform: scale(1); }
         }
     </style>
 </head>
 <body>
-    <div class="logo">
-        <img src="./images/logo.png" alt="Description of the image" style="max-width: 200%; height: auto; border-radius: 50%;">
+    <div class="logo-container">
+        <div class="logo">
+            <img src="./images/logo.png" alt="Description of the image">
+        </div>
     </div>
 
     <script>

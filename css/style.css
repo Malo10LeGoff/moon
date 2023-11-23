@@ -38,7 +38,7 @@ ul, ol
 #about
 {
     padding-top: 100px;
-    background: #212764;
+    background: #211D47;
 }
 .profile-picture
 {
@@ -69,7 +69,7 @@ ul, ol
 .button1:hover
 {
     background-color: #fff;
-    color: #212764;
+    color: #211D47;
     text-decoration: none;
 }
 
@@ -129,7 +129,7 @@ ul, ol
     top: 16px;
     left : 50%;
     margin-left: -25px;
-    background-color: #212764;
+    background-color: #211D47;
     border-radius: 50%;
 }
 .timeline-panel-container
@@ -183,10 +183,6 @@ ul, ol
 {
     margin-top: 5px;
     font-size: 20px;
-}
-.timeline-heading h4
-{
-    color: #d82c2e;
 }
 
 
