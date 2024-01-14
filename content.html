@@ -29,9 +29,18 @@
       h6 {
         font-weight: bold;
       }
-      section {
+      .hidden-section {
         padding: 5px 0 40px 0;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease, transform 1s ease;
       }
+      /* Add an animation class for visible sections */
+      .section-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
       section .heading {
         text-align: center;
         padding-bottom: 40px;
@@ -49,6 +58,10 @@
         background-color: #673ab7;
         margin-top: 35px;
         margin-left: 15px;
+      }
+
+      #newsletter{
+        margin-top: 200px;
       }
 
       .moon-divider-vertical {
@@ -117,6 +130,10 @@
         flex-direction: row;
       }
 
+      #experience{
+        margin-top: 20px;
+      }
+
       .moon_button {
         background-color: #673ab7;
         color: #fff;
@@ -152,6 +169,14 @@
       .moon_button:hover {
         background-color: #fff;
         color: #673ab7;
+      }
+
+      #slack{
+        margin-top: 200px;
+      }
+
+      #mobile_app{
+        margin-top: 200px;
       }
 
       .profile-picture {
@@ -222,6 +247,37 @@
     <script rc="js/script.js"></script>
   </head>
   <body>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get all sections except the first one
+        const sections = document.querySelectorAll("section:not(:first-child)");
+
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+          const rect = element.getBoundingClientRect();
+          console.log("top");
+          console.log(rect.top);
+          return (
+            rect.top <= 500);
+        }
+
+        // Function to handle scroll events
+        function handleScroll() {
+          sections.forEach((section) => {
+            console.log(section)
+            if (isInViewport(section)) {
+              section.classList.add("section-visible");
+            }
+          });
+        }
+
+        // Attach scroll event listener
+        window.addEventListener("scroll", handleScroll);
+
+        // Trigger initial check on page load
+        handleScroll();
+      });
+    </script>
     <section id="about" class="container-fluid">
       <div class="heading">
         <img
@@ -255,7 +311,7 @@
       }
     </script>
 
-    <section id="experience">
+    <section id="experience" class="hidden-section">
       <div class="container">
         <div class="section-header">
           <h3>01. About Moon</h3>
@@ -294,7 +350,7 @@
       </div>
     </section>
 
-    <section id="slack">
+    <section id="slack" class="hidden-section">
       <div class="container">
         <div class="section-header">
           <h3>02. The Slack Integration</h3>
@@ -318,7 +374,7 @@
       </div>
     </section>
 
-    <section id="newsletter">
+    <section id="newsletter" class="hidden-section">
       <div class="container">
         <div class="section-header">
           <h3>03. Moon Newsletter</h3>
@@ -355,7 +411,7 @@
           };
 
           // Make a POST request using the Fetch API
-          fetch("http://localhost:8010/moon_emails", {
+          fetch("http://35.206.188.20:8010/moon_emails", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -375,7 +431,7 @@
       </script>
     </section>
 
-    <section id="mobile_app">
+    <section id="mobile_app" class="hidden-section">
       <div class="container">
         <div class="section-header">
           <h3>04. The mobile application</h3>
