@@ -1,53 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Splash Screen</title>
+  <head>
+    <title>Moon</title>
     <style>
-        /* Centering the logo */
-        body, html {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            background-color: #211D47; /* Set a background color */
-        }
-        
-        /* Style for the logo container */
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      /* Centering the logo */
+      body,
+      html {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: #211d47; /* Set a background color */
+      }
 
-        /* Style for the logo */
-        .logo img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 50%;
-            animation: pulse 3s ease-in-out infinite; /* Apply pulsating animation */
-        }
+      /* Style for the logo container */
+      .logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        /* Animation keyframes */
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); } /* Scale up to 110% */
-            100% { transform: scale(1); }
+      /* Style for the logo */
+      .logo img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        animation: pulse 3s ease-in-out infinite; /* Apply pulsating animation */
+      }
+
+      /* Animation keyframes */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
         }
+        50% {
+          transform: scale(1.1);
+        } /* Scale up to 110% */
+        100% {
+          transform: scale(1);
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="logo-container">
-        <div class="logo">
-            <img src="./images/logo.png" alt="Description of the image">
-        </div>
+      <div class="logo">
+        <img src="./images/logo.png" alt="Description of the image" />
+      </div>
     </div>
 
     <script>
-        // Show the logo for 2 seconds (adjust as needed)
-        setTimeout(function() {
-            window.location.href = 'content.html'; // Redirect to your main page
-        }, 2000); // 2000 milliseconds (2 seconds)
+      // Show the logo for 2 seconds (adjust as needed)
+      setTimeout(function () {
+        window.location.href = "content.html"; // Redirect to your main page
+      }, 2000); // 2000 milliseconds (2 seconds)
     </script>
-</body>
+  </body>
 </html>
